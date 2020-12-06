@@ -21,7 +21,7 @@ const int kLightupIntervalMs = 250;
 
 // Transform an 0-7 loop number into the actual menorah pin
 // My setup has the highest pin number as the night 1 light
-int GetMenorahPin(int p) { return kCandleStart + kCandleCount - p - 1; }
+int GetMenorahPin(const int p) { return kCandleStart + kCandleCount - p - 1; }
 
 // Shut off all of the lights
 void AllOff() {
@@ -42,7 +42,7 @@ int GetNight() {
 }
 
 // Light up the menorah
-void LightUp(int night, bool lightup_delay) {
+void LightUp(const int night, const bool lightup_delay) {
   digitalWrite(kShamash, HIGH);
   for (int p = kCandleCount - 1; p >= 0; p--) {
     // Exit the lightup if the enable pin goes low
