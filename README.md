@@ -24,9 +24,10 @@ connected to `A0`, `A1`, `A2`. The analog inputs are read digitally as GPIO
 inputs where the values make a 3-bit number where `A0` is the least significant
 bit. To set a bit low, connect its corresponding wire to ground. The number to
 set is one less than the amount of LEDs to be lit. To change the number of
-lights, first set the enable pin (purple on the diagram) to ground, set the
-desired number of lights, then set the enable pin to high. The lights will
-light up with a small delay between LEDs, then remain on until the enable pin
-goes low again or the Arduino is powered off.
+lights, first set the enable pin (purple on the diagram) to ground (set the
+switch so all lights are off), set the desired number of lights, then flip the
+switch to set the enable pin to high. The lights will light up with a small
+delay between LEDs, then remain on until the enable pin goes low again or the
+Arduino is powered off.
 
 ![Arduino menorah circuit setup](https://github.com/domagalski/arduino-menorah/blob/main/menorah.png)
